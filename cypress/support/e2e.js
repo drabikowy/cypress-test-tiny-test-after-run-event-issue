@@ -18,3 +18,8 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+Cypress.on("test:after:run", (test, runner) => {
+    console.log("Can't have this called");
+    test.issue
+})
