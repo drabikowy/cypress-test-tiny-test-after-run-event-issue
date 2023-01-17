@@ -21,5 +21,10 @@ import './commands'
 
 Cypress.on("test:after:run", (test, runner) => {
     console.log("Can't have this called");
-    test.issue
+    unefinedVariable // it should just log an error to the console. Nothing happens
+})
+
+Cypress.on("test:before:run", (test, runner) => {
+    console.log("Can't have this called");
+    unefinedVariable // it properly logs an error to the console before test run.
 })
