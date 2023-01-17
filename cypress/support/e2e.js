@@ -25,6 +25,6 @@ Cypress.on("test:after:run", (test, runner) => {
 })
 
 Cypress.on("test:before:run", (test, runner) => {
-    console.log("Can't have this called");
+    console.log("It calls properly");
     unefinedVariable // it properly logs an error to the console before test run.
 })
